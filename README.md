@@ -1,3 +1,8 @@
+# RoboFriends Project
+This project was implemented and had made a little changes for the tutorial of "The Complete Web Developer in 2020: Zero to Mastery" class on Udemy.
+
+Tutorial Repo: https://github.com/aneagoie/robofriends
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
