@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect } from 'react-redux';
 import ReactLoading from "react-loading";
 import "tachyons";
 import "./App.css";
@@ -6,48 +7,31 @@ import CardGallery from "./components/CardGallery";
 import SearchBar from "./components/SearchBar"
 import Scroll from "./components/Scroll"
 
-function App() {
-  const [robots, setRobots] = useState([]);
-  const [searchResult, setSearchResult] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+import { requestRobots, setSearchField } from "./actions"
+
+
+function App({ onRequestRobot, onSearchChange, robots, searchField, isPending, error }) {
+  const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(searchField.toLowerCase()));
 
   useEffect(() => {
-    loadData();
-  }, []);
+    onRequestRobot();
+  }, [onRequestRobot]);
 
-  const loadData = async () => {
-    setIsLoading(true);
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => {
-        setRobots(users); 
-        setSearchResult(users)
-      });
-    setIsLoading(false);
-  }
-
-  const handleSearchChange = (event) => {
-    setIsLoading(true);
-
-    const keyword = event.target.value;
-    let filterdResult = robots.filter(robot => {
-      return robot.name.toLowerCase().includes(keyword.toLowerCase());
-    })
-    setSearchResult(filterdResult);
-    setIsLoading(false);
-  }
+  useEffect(() => {
+    if (error) alert(error);
+  }, [error]);
 
 
   return (
     <div className="App tc">
       <h1 className="f1 App-header">RoboFriends</h1>
-      <SearchBar handleSearchChange={handleSearchChange} />
+      <SearchBar handleSearchChange={onSearchChange} />
       {
-        isLoading ? (
+        isPending ? (
           <ReactLoading className="center" type={"bubbles"} color={"#cdecff"} height={'10%'} width={'10%'} />
         ) : (
           <Scroll>
-            <CardGallery robots={searchResult} />
+            <CardGallery robots={filteredRobots} />
           </Scroll>
         )
       }
@@ -55,4 +39,16 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  searchField: state.searchRobots.searchField,
+  robots: state.requestRobots.robots,
+  isPending: state.requestRobots.isPending,
+  error: state.requestRobots.error,
+})
+
+const mapDispatchToProps = dispatch => ({
+  onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+  onRequestRobot: () => dispatch(requestRobots())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
