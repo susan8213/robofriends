@@ -10,7 +10,7 @@ const Card = ({ id, name, email }) => {
                 className="br-100 h4 w4 dib pa2"
             ></img>
             <h1 className="f3 mb2">{name}</h1>
-            <h2 className="f5 fw4 gray mt0">{email}</h2>
+            <h2 className="f5 fw4 dark-gray mt0">{email}</h2>
         </div>
     )
 }
