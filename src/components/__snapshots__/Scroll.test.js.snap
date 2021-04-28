@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Scroll /> render without crashing 1`] = `"<div style=\\"overflow:scroll;height:80vh\\"></div>"`;

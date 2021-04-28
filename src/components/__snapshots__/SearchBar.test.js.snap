@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar /> render without crashing 1`] = `"<div class=\\"pa2\\"><input type=\\"search\\" class=\\"pa3 ba b--lightest-blue bg-white\\" placeholder=\\"Search robots\\"/></div>"`;
