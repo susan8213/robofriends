@@ -3,7 +3,7 @@ import "tachyons";
 
 const Card = ({ id, name, email }) => {
     return (
-        <div className="br3 pa3 ma2 tc bg-lightest-blue bw2 ba b--black-10 dib grow">
+        <div className="card br3 pa3 ma2 tc bg-lightest-blue bw2 ba b--black-10 dib grow">
             <img 
                 src={`https://robohash.org/${id}?set=set4&size=250x250`}
                 alt="Cat" 

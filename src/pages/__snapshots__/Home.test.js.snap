@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> render without crashing 1`] = `"<div class=\\"App tc\\"><h1 class=\\"f1 App-header\\">RoboFriends</h1><div class=\\"pa2\\"><input type=\\"search\\" class=\\"pa3 ba b--lightest-blue bg-white\\" placeholder=\\"Search robots\\"/></div><div style=\\"overflow:scroll;height:80vh\\"></div></div>"`;

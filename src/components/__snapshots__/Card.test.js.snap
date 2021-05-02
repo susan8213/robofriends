@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> render without crashing 1`] = `"<div class=\\"br3 pa3 ma2 tc bg-lightest-blue bw2 ba b--black-10 dib grow\\"><img src=\\"https://robohash.org/undefined?set=set4&amp;size=250x250\\" alt=\\"Cat\\" class=\\"br-100 h4 w4 dib pa2\\"/><h1 class=\\"f3 mb2\\"></h1><h2 class=\\"f5 fw4 dark-gray mt0\\"></h2></div>"`;
+exports[`<Card /> render without crashing 1`] = `"<div class=\\"card br3 pa3 ma2 tc bg-lightest-blue bw2 ba b--black-10 dib grow\\"><img src=\\"https://robohash.org/undefined?set=set4&amp;size=250x250\\" alt=\\"Cat\\" class=\\"br-100 h4 w4 dib pa2\\"/><h1 class=\\"f3 mb2\\"></h1><h2 class=\\"f5 fw4 dark-gray mt0\\"></h2></div>"`;
