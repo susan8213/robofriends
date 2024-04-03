@@ -1,11 +1,18 @@
 # RoboFriends Project
 This project was implemented and had made a little changes for the tutorial of "The Complete Web Developer in 2020: Zero to Mastery" class on Udemy.
 
+Implementing:
+  - React.JS
+  - Open API Integration
+  - Responsive Web Design (RWD)
+
 Github Page: https://susan8213.github.io/robofriends/
 
 Tutorial Repo: https://github.com/aneagoie/robofriends
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<img width="1440" alt="image" src="https://github.com/susan8213/robofriends/assets/22584134/98683a96-3bd5-4c2c-b929-d35ca37b0937">
 
 ## Available Scripts
 
